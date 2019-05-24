@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100%;
+    justify-content: center;
+    background-color:rgb(192, 192, 192);
+}
+
+button{
+    z-index: 1;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, #99f2c8, #336b5c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 2.2rem;
+    font-weight: 700;
+    color:rgb(59, 53, 53);
+    border: none;
+    border-radius: 5px;
+    color:#f3f3f3;
+    transition: all 1.5s ease;
+
+    
+}
+button:hover{
+    color:white;
+    cursor: pointer;
+      /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite; 
+}
+button:hover::before{
+    transform: translate(-47px, 0px);
+}
+
+button:hover .cmonBruh{
+    transform: translate(47px, 0px);
+}
+
+button::before{
+    transition: transform .5s ease;
+    border-radius: 15px;
+    z-index: 3;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -60px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(118, 224, 132);
+}
+
+button::after{
+    z-index: 2;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -60px;
+    width: 50px;
+    height: 50px;
+    background-image: url(trihard.png);
+    background-position: center;
+    background-size: cover;
+    
+
+}
+.cmonBruh{
+    transition: transform .5s ease;
+    border-radius: 15px;
+    z-index: 10;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 210px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(118, 224, 132);
+}
+.cmonBruh-img{
+
+    z-index: 2;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 210px;
+    width: 45px;
+    height: 45px;
+    background-image: url(jd.png);
+    background-position: center;
+    background-size: cover;
+    
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
